@@ -17,7 +17,7 @@
     <% @courses.each do |course| %>
       <tr>
         <td><%= link_to course.name, course %></td>
-        <td><%= course.url %></td>
+        <td><a href="<%= course.url %>" target="_ext<%= course.id %>"><%= course.url %></a></td>
         <td><%= course.start_date %></td>
         <td><%= course.end_date %></td>
         <td><%= course.is_archived %></td>
