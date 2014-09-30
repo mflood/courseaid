@@ -17,6 +17,7 @@
       <tr>
         <td><%= link_to assignment.course.school.name + ": " + assignment.course.name, assignment.course %></td>
         <td><%= assignment.name %></td>
+        <td><a href="<%= assignment.url %>" target="_ext">Go to url</a></td>
         <td><%= assignment.finished %></td>
         <td><%= assignment.due_date %></td>
         <td><%= assignment.notes %></td>
