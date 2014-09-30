@@ -5,7 +5,7 @@ class CreateCourses < ActiveRecord::Migration
       t.string :url
       t.date :start_date
       t.date :end_date
-      t.bool :is_archived
+      t.boolean :is_archived
       t.references :school, index: true
 
       t.timestamps

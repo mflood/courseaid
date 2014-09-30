@@ -11,7 +11,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140930034340) do
+ActiveRecord::Schema.define(version: 20140930144204) do
+
+  create_table "assignments", force: true do |t|
+    t.integer  "course_id"
+    t.string   "name"
+    t.boolean  "finished"
+    t.date     "due_date"
+    t.text     "notes"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "assignments", ["course_id"], name: "index_assignments_on_course_id"
+
+  create_table "courses", force: true do |t|
+    t.string   "name"
+    t.string   "url"
+    t.date     "start_date"
+    t.date     "end_date"
+    t.boolean  "is_archived"
+    t.integer  "school_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "courses", ["school_id"], name: "index_courses_on_school_id"
+
+  create_table "schools", force: true do |t|
+    t.string   "name"
+    t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
