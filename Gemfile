@@ -45,4 +45,5 @@ group :production do
     gem 'pg', group: :production
 end
 
+gem 'devise'
 
