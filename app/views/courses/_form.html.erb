@@ -12,6 +12,12 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :school_id %><br>
+    <%= select :course, :school_id,
+           School.all.collect { |c| [c.name, c.id]}
+    %>
+  </div>
+  <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
@@ -29,11 +35,7 @@
   </div>
   <div class="field">
     <%= f.label :is_archived %><br>
-    <%= f.text_field :is_archived %>
-  </div>
-  <div class="field">
-    <%= f.label :school_id %><br>
-    <%= f.text_field :school_id %>
+    <%= f.check_box :is_archived %>
   </div>
   <div class="actions">
     <%= f.submit %>

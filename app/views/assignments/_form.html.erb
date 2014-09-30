@@ -13,7 +13,9 @@
 
   <div class="field">
     <%= f.label :course_id %><br>
-    <%= f.text_field :course_id %>
+    <%= select :assignment, :course_id,
+        Course.all.collect {|c| [c.school.name + ':  ' + c.name, c.id]} 
+     %>
   </div>
   <div class="field">
     <%= f.label :name %><br>

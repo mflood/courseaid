@@ -15,7 +15,7 @@
   <tbody>
     <% @assignments.each do |assignment| %>
       <tr>
-        <td><%= assignment.course %></td>
+        <td><%= link_to assignment.course.school.name + ": " + assignment.course.name, assignment.course %></td>
         <td><%= assignment.name %></td>
         <td><%= assignment.finished %></td>
         <td><%= assignment.due_date %></td>
