@@ -7,7 +7,6 @@
       <th>Name</th>
       <th>Finished</th>
       <th>Due date</th>
-      <th>Notes</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,7 +19,6 @@
         <td><a href="<%= assignment.url %>" target="_ext">Go to url</a></td>
         <td><%= assignment.finished %></td>
         <td><%= assignment.due_date %></td>
-        <td><%= assignment.notes %></td>
         <td><%= link_to 'Show', assignment %></td>
         <td><%= link_to 'Edit', edit_assignment_path(assignment) %></td>
         <td><%= link_to 'Destroy', assignment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
