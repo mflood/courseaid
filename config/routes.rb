@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :assignments
+
+  resources :courses
+
+  resources :schools
+
   devise_for :users
   get 'welcome/index'
 
