@@ -8,11 +8,13 @@
 </head>
 <body>
 
-<ul class="nav">
+<div class="navbar navbar-default" role="navigation">
+<ul class="nav navbar-nav">
     <li><%= link_to 'Schools', schools_path %></li>
     <li><%= link_to 'Courses', courses_path %></li>
     <li><%= link_to 'Assignments', assignments_path %></li>
 </ul>
+</div>
 
 <% if notice %>
   <p class="alert alert-success"><%= notice %></p>
