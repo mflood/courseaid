@@ -26,3 +26,29 @@ Things you may want to cover:
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+
+
+-------------------------------------------------
+Bootstrap
+-------------------------------------------------
+Download Bootstrap
+
+Copy:
+
+bootstrap/dist/css/bootstrap.css and bootstrap/dist/css/bootstrap.min.css
+
+To: vendor/assets/stylesheets
+
+Copy:
+
+bootstrap/dist/js/bootstrap.js and bootstrap/dist/js/bootstrap.min.js
+
+To: vendor/assets/javascripts
+
+Update: app/assets/stylesheets/application.css by adding:
+
+*= require bootstrap.min
+Update: app/assets/javascripts/application.jsby adding:
+
+//= require bootstrap.min
+
