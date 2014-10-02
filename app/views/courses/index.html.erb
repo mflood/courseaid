@@ -14,7 +14,7 @@
   </thead>
 
   <tbody>
-    <% @courses.each do |course| %>
+    <% @courses.order(:name).each do |course| %>
       <tr>
         <td><%= link_to course.name, course %></td>
         <td><a href="<%= course.url %>" target="_ext<%= course.id %>">go to url</a></td>
