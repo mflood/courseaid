@@ -17,7 +17,10 @@
     <% @courses.order(:name).each do |course| %>
       <tr>
         <td><%= link_to course.name, course %></td>
-        <td><a href="<%= course.url %>" target="_ext<%= course.id %>">go to url</a></td>
+        <td>
+        <% if course.url %>
+            <a href="<%= course.url %>" target="_ext<%= course.id %>">go to url</a></td>
+        <% end %>
         <td><%= course.start_date %></td>
         <td><%= course.end_date %></td>
         <td><%= course.is_archived %></td>
